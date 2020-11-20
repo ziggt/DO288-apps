@@ -11,7 +11,7 @@ RUN yum install -y --disableplugin=subscription-manager --nodocs \
 	nginx nginx-mod-http-perl \
 	&& yum clean all
 
-COPY nginx.conf /etc/nginx/ \
+COPY nginx.conf /etc/nginx/
 
 RUN touch /run/nginx.pid \
 	&& chgrp -R nginx /var/log/nginx /run/nginx.pid \
